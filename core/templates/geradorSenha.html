@@ -1,0 +1,14 @@
+<h1>Gerador de Password</h1>
+
+<form method="post">
+    
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Gerador de Senha</button>
+    {% if form.is_bound %}
+        <p>Comprimento selecionado: {{ form.cleand_data.length }}</p>
+        {% if senha_gerada %}
+            <p>Senha gerada: {{ senha_gerada }}</p>
+        {% endif %}
+    {% endif %}
+</form>
