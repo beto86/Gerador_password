@@ -50,4 +50,6 @@ class PasswordView(TemplateView):
         context['password'] = password
         return context
     
-  
+
+class AboutView(TemplateView):
+    template_name = 'about.html'
